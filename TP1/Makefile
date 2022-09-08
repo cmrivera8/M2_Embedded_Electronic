@@ -1,10 +1,10 @@
 CC:=gcc
 RPI:=arm-buildroot-linux-uclibcgnueabihf-gcc
 
-pc: main.c
+host: main.c
 	$(CC) main.c -o main_pc.o
 
-rpi:
+target:
 	$(RPI) main.c -o main_rpi.o
 	#scp ./main_rpi.o root@192.168.2.200:/root
 	cp ./main_rpi.o /home/etudiant/nfs/main_rpi.o

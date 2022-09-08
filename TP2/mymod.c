@@ -68,10 +68,11 @@ static ssize_t my_write(struct file *fil,const char *buff,size_t len,loff_t *off
 
 //Third part: Adding ioctl
 static long my_ioctl(struct file *f, unsigned int cmd, unsigned long arg){
-	switch(cmd)
+	switch(cmd){
 		case 0: printk(KERN_ALERT "ioctl 0");break;
 		case 1: printk(KERN_ALERT "ioctl 1");break;
-		default 0: printk(KERN_ALERT "unknown ioctl");break;
+		default: printk(KERN_ALERT "unknown ioctl");break;
+	}
 	return 0;
 }
 

@@ -1,7 +1,7 @@
 CC:=gcc
 RPI:=arm-buildroot-linux-uclibcgnueabihf-gcc
 
-pc: main.c
+host: main.c
 	$(CC) myioctl.c -o myioctl_pc.o
 
 target:
